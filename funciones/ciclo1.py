@@ -12,5 +12,5 @@ def numero(num):
             print (i)
         else:
             print ("NINGÚN NÚMERO ES DIVISIBLE POR 0")
-num = int(input("Digite numero="))
+num = int(input("Digite numero= "))
 print(numero(num))
