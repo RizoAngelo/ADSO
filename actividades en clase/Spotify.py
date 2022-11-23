@@ -10,6 +10,7 @@ def Art(Artita):
         if Artista == "":
             break
         
+        
 def Can(Cancion):
         while True:
             Cancion=input("nombre de la cancion: ")
