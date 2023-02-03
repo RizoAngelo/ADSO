@@ -1,4 +1,4 @@
-student_id = {111: "Eric", 112: "Kyle", 113: "Butters"}
+student_id = {1711: "Erick", 1152: "Kyles", 115: "papa"}
 
 print("inicio  Dictionary: ", student_id)
 

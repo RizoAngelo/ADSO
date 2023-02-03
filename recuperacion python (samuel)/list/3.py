@@ -5,4 +5,5 @@ resultado = []
 for cadena in lista_de_cadenas:
     resultado.append(int(cadena))
     
+    
 print(resultado)
