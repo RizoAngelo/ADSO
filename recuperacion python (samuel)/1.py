@@ -1,5 +1,4 @@
 "pregunta 1"
-
 def funcion(num):
     while num>0:
         if num%2==0:

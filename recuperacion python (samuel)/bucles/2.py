@@ -9,4 +9,4 @@ def nuemro(n):
             print("el programa finalizo con exito")
     print("numeros de intento",(cont))
 n=1
-nuemro(n)
+nuemro(n) 
