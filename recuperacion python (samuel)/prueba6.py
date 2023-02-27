@@ -8,21 +8,21 @@ def seven_segment_display(digit):
                 new_digit += zero
             elif digit_list[i] == '1':
                 new_digit += one
-            if digit_list[i] == '2':
+            elif digit_list[i] == '2':
                 new_digit += two
-            if digit_list[i] == '3':
+            elif digit_list[i] == '3':
                 new_digit += three
-            if digit_list[i] == '4':
+            elif digit_list[i] == '4':
                 new_digit += four
-            if digit_list[i] == '5':
+            elif digit_list[i] == '5':
                 new_digit += five
-            if digit_list[i] == '6':
+            elif digit_list[i] == '6':
                 new_digit += six
-            if digit_list[i] == '7':
+            elif digit_list[i] == '7':
                 new_digit += seven
-            if digit_list[i] == '8':
+            elif digit_list[i] == '8':
                 new_digit += eight
-            if digit_list[i] == '9':
+            elif digit_list[i] == '9':
                 new_digit += nine
         return ((new_digit))
 zero = '###\n# #\n# #\n# #\n###\n\n'

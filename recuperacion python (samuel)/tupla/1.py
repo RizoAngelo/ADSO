@@ -1,5 +1,5 @@
 subjects = ["Matemáticas", "Física", "Química", "Historia", "Lengua"]
 
-for subject in subjects:
-    print("mi materia favorita es ",subject)
+for i in subjects:
+    print("mi materia favorita es ",i)
     
