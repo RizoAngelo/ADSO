@@ -11,6 +11,9 @@ class Persona:#es una clase persona
 
     def metodo(self):#es una funcion llamada metodo
         print('Soy un método')#imprime
+    
+    def myself(self):#es una funcion llamada myself
+        print("Mi nombre es " + self.__nombre + " y vivo en colombia")#esto imprime el el nombre privado que hay en nombre 
 
 
 
@@ -21,3 +24,4 @@ print(ob.getNombre())#luego imprime lo que hay en (ob.getNombre())R:Maria
 #ob.metodo()#aqui llamada la funcion metodo
 #print(type(ob))#imprime que tipo es ob
 print(Persona.__dict__)#esto hace que busca los metodos y atributos de lo que hay en la clase persona
+ob.myself()#llama la funcio
