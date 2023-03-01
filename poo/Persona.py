@@ -13,9 +13,11 @@ class Persona:#es una clase persona
         print('Soy un método')#imprime
 
 
+
 ob=Persona('Ana')#esta variable para llamar la clase persona y para que ob sea (Ana)
 print(ob.getNombre())#aqui imprime lo retornado en (def getNombre(self):)
 ob.setNombre('Maria')#esta linea de codigo es para modifica lo que hay en (ob=Ana)lo modifica a (ob=Maria)
 print(ob.getNombre())#luego imprime lo que hay en (ob.getNombre())R:Maria
 #ob.metodo()#aqui llamada la funcion metodo
-print(type(ob))#imprime que tipo es ob
+#print(type(ob))#imprime que tipo es ob
+print(Persona.__dict__)#esto hace que busca los metodos y atributos de lo que hay en la clase persona
