@@ -16,18 +16,25 @@ class Estudiante:
 
     def agregar_materia(self, materia):
         self.materias.append(materia)
+        
+
+class Intrutor:
+    def __init__(self, nombre, apellido, id_estudiante):
+        self.nombre = nombre
+        self.apellido = apellido
+        self.__id_estudiante = id_estudiante
+        self.materias = []
     
-    def mostrarmaterias(self):
-        return self.materias
+    
 
 materias = []
 
-
+print("Bienvenido Al Menu principal Porfavor dijite un numero para seguir")
 while True:
     print("1. Agregar materia")
     print("2. Registrar estudiante")
     print("3. Buscador de materia")
-    print("4. Cancelacion de materia")
+    print("4. Cancelacion de la matricula del estudiante")
     print("5. Salir")
 
     opcion = int(input("Seleccione una opción: "))
@@ -57,12 +64,18 @@ while True:
 
         print("Estudiante registrado con exito")
     elif opcion ==3:
-        materia.mostrarmaterias()
+        for i, materia in enumerate(materias):
+            print(f"{i+1}. {materia.nombre} ({materia.codigo})")
         
              
     
     elif opcion == 4:
-        None
+        a=input("coloca el nombre del estudiante que quiere eliminar")
+        b=a(estudiante.nombre)
+        del b
+        print("se elimino el estudiante de la materia")
+
+    
 
 
 
