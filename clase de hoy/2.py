@@ -4,9 +4,9 @@ try:
     s = open("c:/users/user/Desktop/file.txt", "rt")
     s.close()
 except Exception as exc:
-    if exc.errno == errno.ENOENT:
+    if exc.errno == errno.ENOENT:#El archivo o directorio no existe. Este error se asigna a la excepción FileNotFoundError.
         print("El archivo no existe.")
-    elif exc.errno == errno.EMFILE:
+    elif exc.errno == errno.EMFILE:#Desbordamiento de la tabla de archivos
         print("Demasiados archivos abiertos.")
     else:
         print("El numero del error es:", exc.errno)
