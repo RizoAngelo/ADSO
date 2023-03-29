@@ -1,0 +1,286 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Todos los derechos reservados.
+
+Prueba la nueva tecnología PowerShell multiplataforma httpsaka.mspscore6
+
+PS CUsersangel cd db
+cd  No se encuentra la ruta de acceso 'CUsersangeldb' porque no existe.
+En línea 1 Carácter 1
++ cd db
++ ~~~~~
+    + CategoryInfo           ObjectNotFound (CUsersangeldbString) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId  PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS CUsersangel cd ..
+PS CUsers cd ..
+PS C cd Csqlite-tools-win32-x86-3400100
+PS Csqlite-tools-win32-x86-3400100 cd db
+PS Csqlite-tools-win32-x86-3400100db sqlite3
+SQLite version 3.40.1 2022-12-28 140347
+Enter .help for usage hints.
+Connected to a transient in-memory database.
+Use .open FILENAME to reopen on a persistent database.
+sqlite create database Rizo.db
+   ... 
+   ... ;
+Parse error near database syntax error
+  create database Rizo.db  ;
+         ^--- error here
+sqlite create database Rizo.db
+   ... ;
+Parse error near database syntax error
+  create database Rizo.db ;
+         ^--- error here
+sqlite .quit
+PS Csqlite-tools-win32-x86-3400100db sqlite3 Rizo.bd
+SQLite version 3.40.1 2022-12-28 140347
+Enter .help for usage hints.
+sqlite .table
+sqlite .quit
+PS Csqlite-tools-win32-x86-3400100db sqlite3 Rizo.db
+SQLite version 3.40.1 2022-12-28 140347
+Enter .help for usage hints.
+sqlite create table Aprendiz(
+   ... idestudiantes INTEGER PRIMARI KEY,
+   ... primer_nom VARCHAR (20),
+   ... primer_ape VARCHAR (20),
+   ... segundo_nom VARCHAR (20),
+   ... segundo_ape VARCHAR (20));
+sqlite .schame Aprendiz
+Error unknown command or invalid arguments  schame. Enter .help for help
+sqlite .schama Aprendiz
+Error unknown command or invalid arguments  schama. Enter .help for help
+sqlite .schema Aprendiz
+CREATE TABLE Aprendiz(
+idestudiantes INTEGER PRIMARI KEY,
+primer_nom VARCHAR (20),
+primer_ape VARCHAR (20),
+segundo_nom VARCHAR (20),
+segundo_ape VARCHAR (20));
+sqlite INSERT INTO Aprendiz VALUES (1,'ANGELO','RIZO','JOSE','GULLOSO')
+   ... ;
+sqlite INSERT INTO Aprendiz VALUES (2,'DARIO','RIZO','JOSE','OSPINO');
+sqlite INSERT INTO Aprendiz VALUES (3,'ANTHONY','RIZO','STIVEN','GULLOSO');
+sqlite INSERT INTO Aprendiz VALUES (4,'LEINER','OSPINO','PEPE','MEJIA');
+sqlite SELECT idestudiantes from ANGELO
+   ... ;
+Parse error no such table ANGELO
+sqlite SELECT idestudiantes from 1
+   ... ;
+Parse error near 1 syntax error
+  SELECT idestudiantes from 1 ;
+              error here ---^
+sqlite SELECT idestudiantes FROM 1;
+Parse error near 1 syntax error
+  SELECT idestudiantes FROM 1;
+              error here ---^
+sqlite SELECT idestudiantes FROM (1);
+Parse error near 1 syntax error
+  SELECT idestudiantes FROM (1);
+               error here ---^
+sqlite SELECT idestudiantes FROM idestudiantes = 1;
+Parse error near = syntax error
+  SELECT idestudiantes FROM idestudiantes = 1;
+                            error here ---^
+sqlite SELECT idestudiantes FROM idestudiantes  1;
+Parse error near 1 syntax error
+  SELECT idestudiantes FROM idestudiantes  1;
+                             error here ---^
+sqlite SELECT idestudiantes FROM idestudiantes ;
+Parse error no such table idestudiantes
+sqlite SELECT idestudiantes FROM  ;
+Parse error near  syntax error
+  SELECT idestudiantes FROM  ;
+              error here ---^
+sqlite SELECT  from Aprendiz
+   ... ;
+1ANGELORIZOJOSEGULLOSO
+2DARIORIZOJOSEOSPINO
+3ANTHONYRIZOSTIVENGULLOSO
+4LEINEROSPINOPEPEMEJIA
+sqlite SELECT 1 FROM Aprendiz
+   ... ;
+1
+1
+1
+1
+sqlite SELECT Aprendiz FROM 1
+   ... ;
+Parse error near 1 syntax error
+  SELECT Aprendiz FROM 1 ;
+                       ^--- error here
+sqlite .schema Aprendiz
+CREATE TABLE Aprendiz(
+idestudiantes INTEGER PRIMARI KEY,
+primer_nom VARCHAR (20),
+primer_ape VARCHAR (20),
+segundo_nom VARCHAR (20),
+segundo_ape VARCHAR (20));
+sqlite SELECT idestudiantes FROM 1;
+Parse error near 1 syntax error
+  SELECT idestudiantes FROM 1;
+              error here ---^
+sqlite .tables
+Aprendiz
+sqlite .database
+main Csqlite-tools-win32-x86-3400100dbRizo.db rw
+sqlite .tablas
+Error unknown command or invalid arguments  tablas. Enter .help for help
+sqlite .table
+Aprendiz
+sqlite selct  from Aprendiz
+   ... selct  from Aprendi;
+Parse error near selct syntax error
+  selct  from Aprendiz selct  from Aprendi;
+  ^--- error here
+sqlite .schema Aprendiz
+CREATE TABLE Aprendiz(
+idestudiantes INTEGER PRIMARI KEY,
+primer_nom VARCHAR (20),
+primer_ape VARCHAR (20),
+segundo_nom VARCHAR (20),
+segundo_ape VARCHAR (20));
+sqlite SELECT idestudiantes from 1
+   ... ;
+Parse error near 1 syntax error
+  SELECT idestudiantes from 1 ;
+              error here ---^
+sqlite SELECT  FROM Aprendiz WHERE primer_nom();
+Parse error no such function primer_nom
+  SELECT  FROM Aprendiz WHERE primer_nom();
+                 error here ---^
+sqlite SELECT  FROM Aprendiz WHERE primer_nom()
+   ... SELECT  FROM Aprendiz WHERE primer_nom
+   ...
+   ...
+   ...
+   ...
+   ...
+   ... ;
+Parse error near SELECT syntax error
+  SELECT  FROM Aprendiz WHERE primer_nom() SELECT  FROM Aprendiz WHERE primer_
+                              error here ---^
+sqlite SELECT  FROM Aprendiz WHERE primer_nom;
+sqlite SELECT  FROM Aprendiz WHERE primer_nom(1);
+Parse error no such function primer_nom
+  SELECT  FROM Aprendiz WHERE primer_nom(1);
+                 error here ---^
+sqlite SELECT  FROM Aprendiz WHERE primer_nom;
+sqlite
+sqlite CREATE TABLE ()
+   ... ;
+Parse error near ( syntax error
+  CREATE TABLE () ;
+               ^--- error here
+sqlite CREATE TABLE (
+   ... ;
+Parse error near ( syntax error
+  CREATE TABLE ( ;
+               ^--- error here
+sqlite CREATE TABLE colegio (
+   ... idcolegio INTEGER PRIMARI KEY,
+   ... ;
+Parse error near ; syntax error
+  TE TABLE colegio ( idcolegio INTEGER PRIMARI KEY, ;
+                                      error here ---^
+sqlite CREATE TABLE colegio (
+   ... .quit
+   ... ;
+Parse error near . syntax error
+  CREATE TABLE colegio ( .quit ;
+                         ^--- error here
+sqlite .quit
+PS Csqlite-tools-win32-x86-3400100db sqlite3 Rizo.db
+SQLite version 3.40.1 2022-12-28 140347
+Enter .help for usage hints.
+sqlite create table Aprendiz(
+   ... idestudiante CHAR (10) PRIMARY KEY NOT NULL,
+   ... primer_nom VARCHAR (20),
+   ... primer_ape VARCHAR (20),
+   ... seg_nom VARCHAR (20),
+   ... seg_ape VARCHAR (20));
+sqlite CREATE TABLE Colegio(
+   ... idcolegio CHAR (10) PRIMARY KEY,
+   ... idcolegio CHAR (10) PRIMARY KEY;
+Parse error duplicate column name idcolegio
+sqlite CREATE TABLE Colegio(
+   ... idcolegio CHAR (10),
+   ... estudiante_idestudiante INTEGER ;
+Parse error near ; syntax error
+  olegio CHAR (10), estudiante_idestudiante INTEGER ;
+                                      error here ---^
+sqlite CREATE TABLE Colegio(
+   ... idcolegio CHAR (10) INTEGER
+   ... estudiante_idestudiante CHAR (10) PRIMARY KEY NOT NULL,
+   ... privado VARCHAR(20),
+   ... distrital VARCHAR(20),
+   ... CONSTRAINT FK_Aprendiz FOREIGN KEY (estudiante_idestudiante) REFERENCES Aprendiz (idestudiante);
+Parse error near INTEGER syntax error
+  CREATE TABLE Colegio( idcolegio CHAR (10) INTEGER estudiante_idestudiante CHAR
+                              error here ---^
+sqlite CREATE TABLE Colegio(
+   ... idcolegio CHAR (10) INTEGER,
+   ... ;
+Parse error near INTEGER syntax error
+  CREATE TABLE Colegio( idcolegio CHAR (10) INTEGER, ;
+                              error here ---^
+sqlite CREATE TABLE Colegio(
+   ... idcolegio CHAR (10) PRIMARY KEY,
+   ... estudiante_idestudiante CHAR (10) NOT NULL,
+   ... privado VARCHAR(20),
+   ... distrital VARCHAR(20),
+   ... CONSTRAINT FK_Aprendiz FOREIGN KEY (estudiante_idestudiante) REFERENCES Aprendiz (idestudiante));
+sqlite .schema Aprendiz
+CREATE TABLE Aprendiz(
+idestudiante CHAR (10) PRIMARY KEY NOT NULL,
+primer_nom VARCHAR (20),
+primer_ape VARCHAR (20),
+seg_nom VARCHAR (20),
+seg_ape VARCHAR (20));
+sqlite .schema Colegio
+CREATE TABLE Colegio(
+idcolegio CHAR (10) PRIMARY KEY,
+estudiante_idestudiante CHAR (10) NOT NULL,
+privado VARCHAR(20),
+distrital VARCHAR(20),
+CONSTRAINT FK_Aprendiz FOREIGN KEY (estudiante_idestudiante) REFERENCES Aprendiz (idestudiante));
+sqlite
+sqlite SELECT  FROM Aprendiz
+   ... ;
+sqlite INSERT INTO Aprendiz VALUES (1,'ANGELO','RIZO','JOSE','GULLOSO');
+sqlite SELECT  FROM Aprendiz
+   ... ;
+1ANGELORIZOJOSEGULLOSO
+sqlite SELECT  FROM Aprendiz,Colegio
+   ... ;
+sqlite INSERT INTO Colegio VALUE (1,1,'PRIVADO','VIDA NUEVA');
+Parse error near VALUE syntax error
+  INSERT INTO Colegio VALUE (1,1,'PRIVADO','VIDA NUEVA');
+                      ^--- error here
+sqlite INSERT INTO Colegio VALUSE (1,1,'PRIVADO','VIDA NUEVA');
+Parse error near VALUSE syntax error
+  INSERT INTO Colegio VALUSE (1,1,'PRIVADO','VIDA NUEVA');
+                      ^--- error here
+sqlite INSERT INTO Colegio VALUES (1,1,'PRIVADO','VIDA NUEVA');
+sqlite SELECT  FROM Aprendiz,Colegio
+   ... ;
+1ANGELORIZOJOSEGULLOSO11PRIVADOVIDA NUEVA
+sqlite SELECT  FROM Aprendiz,
+   ... Colegio
+   ... ;
+1ANGELORIZOJOSEGULLOSO11PRIVADOVIDA NUEVA
+sqlite ALTER TABLE Colegio
+   ...
+   ... ADD FOREIGN KEY (estudiante_idestudiante) REFERENCES Aprendiz (idestudiante)
+   ... ;
+Parse error near FOREIGN syntax error
+  ALTER TABLE Colegio  ADD FOREIGN KEY (estudiante_idestudiante) REFERENCES Apre
+             error here ---^
+sqlite ALTER TABLE Colegio
+   ... ADD FOREIGN KEY (estudiante_idestudiante) REFERENCES Aprendiz (idestudiante)
+   ... ;
+Parse error near FOREIGN syntax error
+  ALTER TABLE Colegio ADD FOREIGN KEY (estudiante_idestudiante) REFERENCES Apren
+                          ^--- error here
+sqlite ALTER TABLE Colegio
+PS Csqlite-tools-win32-x86-3400100db

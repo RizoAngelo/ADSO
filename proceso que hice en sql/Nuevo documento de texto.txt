@@ -1,0 +1,28 @@
+INSERT INTO tb_Profesor VALUES (63502720,'Martha','Rojas',2,600000);
+INSERT INTO tb_Profesor VALUES (91216904,'Carlos','Pérez',3,950000);
+INSERT INTO tb_Profesor VALUES (1382789,'Maritza','Angarita',1,550000);
+INSERT INTO tb_Profesor VALUES (1098765789,'Alejandra','Torres',4,1100000);
+
+
+para mañana
+
+INSERT INTO tb_Curso VALUES ('nom_curs','horas_curs','valor_curs)(149842,'Fundamentos de Bases de datos',40);
+INSERT INTO tb_Curso VALUES (nom_curs,horas_curs,valor_curs)(250067,'Fundamentos de SQL',20);
+INSERT INTO tb_Curso VALUES (nom_curs,horas_curs,valor_curs)(289011,'Manejo de Mysql',45);
+INSERT INTO tb_Curso VALUES (nom_curs,horas_curs,valor_curs)(345671,'Fundamentals of Oracle',60);
+
+INSERT INTO tb_Estudiante VALUES (63502720,'María','Perez',23);
+INSERT INTO tb_Estudiante VALUES (91245678,'Carlos José','Lopez',25);
+INSERT INTO tb_Estudiante VALUES (1098098097,'Jonatan','Ardilla',17);
+INSERT INTO tb_Estudiante VALUES (1098765678,'Carlos','Martinez',19);
+
+INSERT INTO tb_Estudiantexcurso VALUES (289011,1098765678,01/02/2011);
+INSERT INTO tb_Estudiantexcurso VALUES (250067,63502720,01/03/2011);
+INSERT INTO tb_Estudiantexcurso VALUES (289011,1098098097,01/02/2011);
+INSERT INTO tb_Estudiantexcurso VALUES (345671,63502720,01/04/2011);
+
+INSERT INTO tb_Cliente VALUES (63502718,'Maritza','Rojas','Calle 34 No.14-45','Santander','Abril');
+INSERT INTO tb_Cliente VALUES (13890234,'Roger','Ariza','Cra 30 No.13-45','Antioquia','Junio');
+INSERT INTO tb_Cliente VALUES (77191956,'Juan Carlos','Arenas','Diogonal 23 No.13-34 apto 101','Valle','Marzo');
+INSERT INTO tb_Cliente VALUES (1098765789,'Catalina','Zapata','Av el Libertador No.30-14','Cauca','Marzo');
+
